@@ -47,10 +47,12 @@ Results on CNN/DailyMail:
 Some codes are borrowed from BERTSUM(https://github.com/nlpyang/BertSum)
 
 
-## Data Preparation For CNN/Dailymail
+## Data Preparation
 
 #### Step 1 Download Stories
-Download and unzip the `stories` directories from [here](http://cs.nyu.edu/~kcho/DMQA/) for both CNN and Daily Mail. Put all  `.story` files in one directory (e.g. `../raw_stories`)
+For CNNDM, download and unzip the `stories` directories from [here](http://cs.nyu.edu/~kcho/DMQA/) for both CNN and Daily Mail. Put all  `.story` files in one directory (e.g. `../raw_stories`)
+
+For New York Times dataset, y
 
 ####  Step 2. Download Stanford CoreNLP
 We will need Stanford CoreNLP to tokenize the data. Download it [here](https://stanfordnlp.github.io/CoreNLP/) and unzip it. Then add the following command to your bash_profile:
