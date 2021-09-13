@@ -1,6 +1,6 @@
 # DSGSum
 
-**This code is for paper [Augmented Abstractive Summarization With Document-Level Semantic Graph]
+** This code is for paper [Augmented Abstractive Summarization With Document-Level Semantic Graph]
 
 
 
