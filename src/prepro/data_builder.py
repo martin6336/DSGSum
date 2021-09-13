@@ -279,46 +279,7 @@ class BertData():
             return None
 
         original_src_txt = [' '.join(s) for s in src]
-        # ########################################### tfidf
-        # doc_txt = sum(src, [])
-        # doc_txt = [i for i in doc_txt if i not in STOPWORDS]
-        # # print(doc_txt)
-        # bow_vector = lda_dict.doc2bow(doc_txt)
-        # # print(bow_vector)
-        # tfidf_vector = tfidf_dict[bow_vector]
-        # tfidf_vector.sort(key=lambda x: x[1], reverse=True)
-        # word_token_list = [word[0] for word in tfidf_vector]
-        #
-        # word_list = [lda_dict[token] for token in word_token_list]
-        # score_list = [score[1] for score in tfidf_vector]
-        # ########## extract graph
-        # extract_ent = word_list[:40]
-        # # subject_list = neighbor.keys()
-        # subject_list = list(neighbor.keys())
-        # # print(subject_list)
-        # spo_list = []
-        # ent_list = []
-        # rel_list = []
-        # for subject in extract_ent:
-        #     if subject in subject_list:
-        #         sub_list = neighbor[subject]
-        #         for ob in sub_list:
-        #             ent=ob[1]
-        #             # 0.4
-        #             if ent in extract_ent:
-        #                 spo_meta = [subject, ob[0], ent]
-        #
-        #                 if spo_meta not in spo_list and subject != ent:
-        #                     new = [self.tokenizer.convert_tokens_to_ids([spo_meta[0]])[0], rel_map[spo_meta[1]],
-        #                            self.tokenizer.convert_tokens_to_ids([spo_meta[2]])[0]]
-        #                     spo_meta = new
-        #                     spo_list.append(spo_meta)
-        #                     if spo_meta[0] not in ent_list:
-        #                         ent_list.append(spo_meta[0])
-        #                     if spo_meta[2] not in ent_list:
-        #                         ent_list.append(spo_meta[2])
-        #                     if spo_meta[1] not in rel_list:
-        #                         rel_list.append(spo_meta[1])
+
         ################################################# extract entity graph
         src_ent = ' '.join([' '.join(sent) for sent in ini_source])
         # src_ent = src_ent.split(' ')[:900]
